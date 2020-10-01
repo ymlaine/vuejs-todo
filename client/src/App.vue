@@ -1,7 +1,7 @@
 <template>
 	<div id="app" class="container py-5">
 		<h1 class="fs-h1 text-center">
-			Vuejs Todo app
+			Vuejs Todo [DEMO1 : Matomo init loaded in header]
 		</h1>
 
 		<div class="nav text-center mt-3">

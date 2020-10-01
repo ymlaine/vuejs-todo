@@ -38,6 +38,14 @@
             onTaskStatusChange(e) {
                 const checked = e.target.checked
                 this.$emit("eventTaskStatusChange", this.id, checked)
+
+                if (checked) {
+                    console.log("done : " + this.text)
+                    window._paq.push(['trackEvent', 'Todo', 'Done', 'doneTodo', this.text]);
+                } else {
+                    console.log("cancel : " + this.text)
+                    window._paq.push(['trackEvent', 'Todo', 'Cancel', 'cancelTodo', this.text]);
+                }
             },
 
             /**
@@ -45,6 +53,8 @@
              */
             onTaskDelete(e) {
                 this.$emit("eventTaskDelete", this.id)
+                console.log("delete : " + this.text)
+                window._paq.push(['trackEvent', 'Todo', 'Delete', 'deleteTodo', this.text]);
             }
         }
     }

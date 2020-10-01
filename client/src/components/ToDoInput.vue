@@ -22,6 +22,10 @@
 
 				this.$emit("eventAddNewTask", taskName)
 
+				console.log("create : " + this.text)
+				window._paq.push(['trackEvent', 'Todo', 'Create', 'createTodo', taskName]);
+
+
 				// reset the textbox
 				this.text = ""
 			}

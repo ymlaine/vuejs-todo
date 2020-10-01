@@ -1,3 +1,6 @@
 module.exports = {
-  publicPath: '/vuejs-todo/'
+  publicPath: '/',
+  devServer: {
+    disableHostCheck: true 
+  }
 }
